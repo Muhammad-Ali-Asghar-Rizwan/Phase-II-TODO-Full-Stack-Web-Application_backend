@@ -57,7 +57,9 @@ jobs:
         # Create .env file with secrets
         cd hf
         cat > .env << EOF
-
+        DATABASE_URL=$DATABASE_URL
+        JWT_SECRET=$JWT_SECRET
+        EOF
 
         git add .
         git commit -m "Deploy" || echo "No changes"
