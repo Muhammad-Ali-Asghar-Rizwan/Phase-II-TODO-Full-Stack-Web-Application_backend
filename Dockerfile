@@ -8,7 +8,10 @@ WORKDIR /app
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1 \
-    PIP_DISABLE_PIP_VERSION_CHECK=1
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    DATABASE_URL=sqlite:///./todo_app.db \
+    JWT_SECRET=your-secret-key-change-in-production \
+    ACCESS_TOKEN_EXPIRE_MINUTES=30
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \

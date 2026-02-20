@@ -12,8 +12,11 @@ from sqlmodel.ext.asyncio.session import AsyncSession
 load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
+
+# Fallback to SQLite if DATABASE_URL is not set
 if not DATABASE_URL:
-    raise ValueError("DATABASE_URL environment variable is not set")
+    DATABASE_URL = "sqlite:///./todo_app.db"
+    print(f"Warning: DATABASE_URL not set, using SQLite: {DATABASE_URL}")
 
 # Handle different database types
 if DATABASE_URL.startswith("sqlite"):
