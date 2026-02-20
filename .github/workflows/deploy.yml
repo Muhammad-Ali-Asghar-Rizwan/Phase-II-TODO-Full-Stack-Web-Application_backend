@@ -32,7 +32,7 @@ jobs:
         cp -r src/ hf/
         cp -r tests/ hf/
         cp -r alembic/ hf/
-        cp -r .venv/ hf/
+        
         cp -r __pycache__/ hf/
 
         cp main.py hf/
