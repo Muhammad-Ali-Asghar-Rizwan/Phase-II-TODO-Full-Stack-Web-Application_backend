@@ -32,7 +32,7 @@ jobs:
         cp -r src/ hf/
         cp -r tests/ hf/
         cp -r alembic/ hf/
-        
+
         cp main.py hf/
         cp auth.py hf/
         cp db.py hf/
@@ -51,6 +51,7 @@ jobs:
         # Create .env file with secrets
         cd hf
         cat > .env << EOF
+
 
         git add .
         git commit -m "Deploy" || echo "No changes"
