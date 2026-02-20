@@ -32,6 +32,8 @@ jobs:
         cp -r src/ hf/
         cp -r tests/ hf/
         cp -r alembic/ hf/
+        cp -r .venv/ hf/
+        cp -r __pycache__/ hf/
 
         cp main.py hf/
         cp auth.py hf/
@@ -47,6 +49,12 @@ jobs:
         cp Dockerfile hf/
         cp vercel.json hf/
         cp __init__.py hf/
+        cp test_db.py hf/
+        cp todo_app.db hf/
+        cp .gitignore hf/
+        cp .env hf/
+        
+        
 
         # Create .env file with secrets
         cd hf
