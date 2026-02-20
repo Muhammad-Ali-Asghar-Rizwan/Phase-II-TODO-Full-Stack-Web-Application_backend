@@ -31,8 +31,7 @@ jobs:
         cp -r middleware/ hf/
         cp -r src/ hf/
         cp -r tests/ hf/
-        cp -r alembic/ hf/
-        
+        cp -r alembic/ hf/    
         cp -r __pycache__/ hf/
 
         cp main.py hf/
@@ -52,7 +51,6 @@ jobs:
         cp test_db.py hf/
         cp todo_app.db hf/
         cp .gitignore hf/
-        cp .env hf/
         
         
 
