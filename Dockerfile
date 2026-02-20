@@ -27,6 +27,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY . .
 
+# Create .env file for fallback
+RUN echo "DATABASE_URL=sqlite:///./todo_app.db" > .env && \
+    echo "JWT_SECRET=your-secret-key-change-in-production" >> .env
+
 # Expose port
 EXPOSE 8000
 
